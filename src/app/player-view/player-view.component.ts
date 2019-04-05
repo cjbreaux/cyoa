@@ -10,15 +10,14 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [PlayerService]
 })
 export class PlayerViewComponent implements OnInit {
-  playerToDisplay: Player;
+  playerToDisplay;
+
 
   constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
     this.playerService.getPlayer().subscribe(latestData => {
-      this.playerToDisplay = new Player (latestData[latestData.length - 1].name,
-        latestData[latestData.length - 1].playerClass,
-        latestData[latestData.length - 1].inventory)
+      this.playerToDisplay = latestData[latestData.length - 1]
         console.log(this.playerToDisplay)
       })
   }

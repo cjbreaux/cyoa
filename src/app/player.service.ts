@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
-import { PLAYERS } from './playerInfo';
+// import { PLAYERS } from './playerInfo';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable({

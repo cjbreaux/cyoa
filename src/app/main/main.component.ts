@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
 
   newPlayer: Player = new Player (null, null, []);
 
-  submitForm(newPlayer: Player) {
+  submitForm() {
     this.playerService.addPlayer(this.newPlayer)
   }
 
