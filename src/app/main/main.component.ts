@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
   }
 
   constructor(private playerService: PlayerService) { }
-
+//When I format playerToDisplay in this way by creating a new player object, I NO LONGER have access to the firebase $key property//
   ngOnInit() {
    this.playerService.getPlayer().subscribe(latestData => {
       this.playerToDisplay = new Player (latestData[latestData.length - 1].name,

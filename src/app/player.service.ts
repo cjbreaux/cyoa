@@ -21,6 +21,7 @@ export class PlayerService {
     this.players.push(player);
   }
 
+//these methods need to be reworked to correctly utilize the $key property//
   getPlayerById(playerId: string){
     return this.database.object('/players/' + playerId);
   }

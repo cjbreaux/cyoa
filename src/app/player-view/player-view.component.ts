@@ -14,7 +14,7 @@ export class PlayerViewComponent implements OnInit {
 
 
   constructor(private playerService: PlayerService) { }
-
+//changed playerToDisplay to NOT return a new player object but the firebassObsv that has the $key property//
   ngOnInit() {
     this.playerService.getPlayer().subscribe(latestData => {
       this.playerToDisplay = latestData[latestData.length - 1]
